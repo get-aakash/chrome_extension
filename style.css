@@ -22,3 +22,13 @@ button{
     border-radius: 3px;
     font-weight: bold;
 }
+
+#box{
+    text-align: center;
+    color: #fff;
+    padding: 40px;
+    background: cyan;
+    margin: 30px auto;
+    width: 300px;
+    border-radius: 4px;
+}
