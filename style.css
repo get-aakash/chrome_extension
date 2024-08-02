@@ -32,3 +32,17 @@ button{
     width: 300px;
     border-radius: 4px;
 }
+
+ul{
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 20px;
+}
+
+li{
+    margin-top: 5px;
+    
+}
+a{
+    color: #5f9341;
+}
