@@ -1,5 +1,5 @@
 
-let myLeads = ["a","b","c","d"]
+let myLeads = []
 
 let inputEl = document.getElementById("input-el")
 
@@ -9,13 +9,24 @@ const ulEl = document.getElementById("ul-el")
 
 const containerEl = document.getElementById("container-el")
 
-inputBtn.addEventListener("click", function(){
+
+inputBtn.addEventListener("click", function () {
     myLeads.push(inputEl.value)
-    console.log(myLeads)
+
+    renderLeads()
 })
 
-for(let i= 0; i<myLeads.length;i++){
-    ulEl.innerHTML += "<li>" + myLeads[i] + "</li" 
-}
 
-containerEl.innerHTML = "<button>" + "Buy!" + "</button>"
+
+
+function renderLeads() {
+    let listitems = ""
+    for (let i = 0; i < myLeads.length; i++) {
+
+        listitems += `<li>
+        
+        <a target='_blank' href='${myLeads[i]}' >${myLeads[i]}</a></li>`
+    }
+
+    ulEl.innerHTML =  listitems 
+}
