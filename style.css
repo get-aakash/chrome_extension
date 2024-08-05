@@ -17,11 +17,16 @@ button{
     margin-top: 10px;
     color: floralwhite;
     background: #5f9341;
-    padding: 10px;
-    width: 100px;
-    border: none;
+    padding: 10px 20px;
+    border: 1px solid #5f9341 ;
     border-radius: 3px;
     font-weight: bold;
+}
+
+#delete-btn{
+    background: white;
+    color: #5f9341;
+
 }
 
 #box{
