@@ -16,14 +16,20 @@ const containerEl = document.getElementById("container-el")
 
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
-tabBtn.addEventListener("click", function(){
-    console.log("www.myexample.com")
-})
-
 if(leadsFromLocalStorage){
     myLeads = leadsFromLocalStorage
     renderLeads(myLeads)
 }
+
+tabBtn.addEventListener("click", function(){
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        myLeads.push(tabs[0].url)
+        localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+        renderLeads(myLeads)
+    }) 
+})
+
+
 
 inputBtn.addEventListener("click", function () {
     myLeads.push(inputEl.value)
